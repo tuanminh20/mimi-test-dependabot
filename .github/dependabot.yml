@@ -1,0 +1,23 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+# registries:
+#   ruby-github:
+#     type: rubygems-server
+#     url: https://rubygems.pkg.github.com/moneyforward
+#     token: ${{ secrets.READ_PACKAGES }}
+updates:
+  - package-ecosystem: bundler
+    directory: "/"
+    insecure-external-code-execution: allow
+    registries:
+      - ruby-github
+    schedule:
+      interval: daily
+      time: "11:30"
+      timezone: Asia/Tokyo
+    open-pull-requests-limit: 99
+    versioning-strategy: lockfile-only
