@@ -13,8 +13,8 @@ updates:
   - package-ecosystem: bundler
     directory: "/"
     insecure-external-code-execution: allow
-    registries:
-      - ruby-github
+    # registries:
+    #   - ruby-github
     schedule:
       interval: daily
       time: "11:30"
